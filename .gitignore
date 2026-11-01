@@ -1,0 +1,20 @@
+# Connect IQ Build Artifacts
+bin/
+gen/
+mir/
+internal-mir/
+*.prg
+*.iq
+*.prg.debug.xml
+
+# Connect IQ Developer Signing Keys (Security)
+*.der
+*.pem
+developer_key
+developer_key.der
+
+# System & IDE
+.vscode/
+.DS_Store
+Thumbs.db
+

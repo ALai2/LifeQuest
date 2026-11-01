@@ -1,0 +1,7 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Life Quest</string>
+    <string id="logReading">Log Reading</string>
+    <string id="readingFive">Log 5 Minutes</string>
+    <string id="readingTen">Log 10 Minutes</string>
+    <string id="readingTwenty">Log 20 Minutes</string>
+</strings>
