@@ -1,6 +1,5 @@
 <menu id="MainMenu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <menu-item id="log_reading" label="@Strings.logReading" />
-    <menu-item id="reading_5" label="@Strings.readingFive" />
-    <menu-item id="reading_10" label="@Strings.readingTen" />
-    <menu-item id="reading_20" label="@Strings.readingTwenty" />
+    <menu-item id="equip_title" label="@Strings.equipTitle" />
+    <menu-item id="reset_reading" label="@Strings.resetReading" />
 </menu>
