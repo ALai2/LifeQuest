@@ -283,7 +283,13 @@ class LifeQuestState {
         } else if (activity == :strength) {
             awardWeighted(xpPool, :STR, 0.8, :VIT, 0.2);
         } else if (activity == :yoga) {
-            addXp(:AGI, xpPool);
+            awardWeighted(xpPool, :AGI, 0.8, :VIT, 0.2);
+        } else if (activity == :cardio) {
+            awardWeighted(xpPool, :VIT, 0.6, :AGI, 0.4);
+        } else if (activity == :walking) {
+            awardWeighted(xpPool, :VIT, 0.7, :AGI, 0.3);
+        } else {
+            awardWeighted(xpPool, :VIT, 0.5, :STR, 0.5);
         }
     }
 

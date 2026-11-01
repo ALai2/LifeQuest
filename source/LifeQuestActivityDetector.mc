@@ -39,12 +39,12 @@ class LifeQuestActivityDetector {
         }
 
         var minutes = elapsedDelta.toFloat() / 60000.0;
-                if (activity == :running && info has :elapsedDistance
-                    && info.elapsedDistance != null) {
-                    var distance = info.elapsedDistance as Float;
-                    state.recordContinuousRun(distance);
-                    session["lastDistance"] = distance;
-                }
+        if (activity == :running && info has :elapsedDistance
+            && info.elapsedDistance != null) {
+            var distance = info.elapsedDistance as Float;
+            state.recordContinuousRun(distance);
+            session["lastDistance"] = distance;
+        }
         var averageHeartRate = 0.0;
         var maxHeartRate = 0.0;
         var averageCadence = 0.0;
@@ -89,11 +89,18 @@ class LifeQuestActivityDetector {
         } else if (name.find("swim") != null) {
             return :swimming;
         } else if (name.find("strength") != null || name.find("weight") != null
-            || name.find("hiit") != null) {
+            || name.find("lift") != null) {
             return :strength;
-        } else if (name.find("yoga") != null || name.find("stretch") != null) {
+        } else if (name.find("yoga") != null || name.find("stretch") != null
+            || name.find("pilates") != null) {
             return :yoga;
+        } else if (name.find("cardio") != null || name.find("hiit") != null
+            || name.find("row") != null || name.find("elliptical") != null
+            || name.find("stair") != null) {
+            return :cardio;
+        } else if (name.find("walk") != null || name.find("hike") != null) {
+            return :walking;
         }
-        return null;
+        return :generic;
     }
 }
